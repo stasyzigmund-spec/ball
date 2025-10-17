@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shopping Vibe — Вайб по выбранным товарам</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="head-inner">
+      <div class="title">Shopping Vibe — Вайб по выбранным товарам</div>
+      <div class="badge">Выберите до 5 предметов</div>
+      <div class="grow"></div>
+      <button class="btn" id="resetBtn">Сбросить</button>
+    </div>
+  </header>
+
+  <div class="app">
+    <section class="panel">
+      <div class="row" style="margin-bottom:8px">
+        <div style="font-weight:700">Полки с товарами</div>
+        <div class="grow"></div>
+        <div class="hint"><span id="countText">0</span>/5 выбрано</div>
+      </div>
+      <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+
+      <div class="shelves" id="shelves"></div>
+      <div class="footer-hint">Можно выбрать от 1 до 5 предметов. Повторный клик — отмена.</div>
+    </section>
+
+    <aside class="orb-wrap">
+      <div class="panel">
+        <div class="row" style="justify-content:space-between;align-items:center">
+          <div style="font-weight:700">Гелевая сфера</div>
+          <div class="hint">Переливы фиолетово‑голубо‑сине‑розовые</div>
+        </div>
+        <div class="orb" id="orb">
+          <div class="orb-gl" id="orbGL"></div>
+          <div class="orb-clip" id="orbTokens"></div>
+        </div>
+      </div>
+
+      <div class="panel result" id="result">
+        <div class="title">Результат</div>
+        <p id="status">Выберите хотя бы 1 предмет, чтобы увидеть ваш вайб.
+        <div id="vibeContent" style="display:none">
+          <div class="row" style="gap:12px;align-items:flex-start">
+            <div style="flex:1">
+              <div class="title">Повседневный вайб</div>
+              <p id="vibeDay">
+            </div>
+            <div style="flex:1">
+              <div class="title">Теневой вайб</div>
+              <p id="vibeShadow">
+            </div>
+          </div>
+          <div class="tags" id="vibeTags"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
